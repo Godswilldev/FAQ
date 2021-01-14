@@ -1,14 +1,20 @@
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
 
-html{
+html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
 
-body{
-    background-color: lawngreen;
+.body {
+    background-image: linear-gradient(to bottom, rgba($color-Soft-violet, .6), rgba($color-Soft-blue, .6));
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

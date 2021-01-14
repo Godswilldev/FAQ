@@ -1,8 +1,5 @@
 @charset "UTF-8";
 /*
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
 
   What is the maximum file upload size?
   No more than 2GB. All files in your account must fit your allotted storage space.
@@ -17,7 +14,9 @@
   Do you provide additional support?
   Chat and email support is available 24/7. Phone lines are open during normal business hours.
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit; }
@@ -26,5 +25,85 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
-body {
-  background-color: lawngreen; }
+.body {
+  background-image: linear-gradient(to bottom, rgba(175, 103, 233, 0.6), rgba(101, 101, 231, 0.6));
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.container {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  border-radius: 2rem;
+  margin: 0 auto;
+  height: 75%;
+  width: 60%;
+  position: relative;
+  overflow: hidden; }
+
+.img {
+  display: flex;
+  grid-column: 1/2;
+  height: 100%;
+  flex-direction: column;
+  position: relative; }
+  .img--2 {
+    top: 20%; }
+  .img--3 {
+    height: 50%;
+    top: 50%;
+    right: 40%; }
+  .img img {
+    width: 100%;
+    position: absolute; }
+
+.faqs {
+  grid-column: 2/-1;
+  padding: 1rem 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.heading_primary {
+  margin-bottom: 1rem;
+  font-size: 2.5rem; }
+
+.faq {
+  color: #4a4b5e;
+  border-bottom: 1px solid #e7e7e9;
+  margin-bottom: 1rem;
+  position: relative;
+  transition: 1s all; }
+  .faq__title {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem; }
+    .faq__title:hover {
+      color: #f47c57; }
+  .faq__answer {
+    font-size: 1.2rem;
+    color: #787887;
+    margin-bottom: 1rem;
+    display: none;
+    padding-right: 2rem; }
+  .faq__toggle {
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer; }
+  .faq.active .faq__title {
+    font-weight: 700;
+    font-size: 1.5rem; }
+    .faq.active .faq__title:hover {
+      color: #4a4b5e;
+      cursor: default; }
+  .faq.active .faq__answer {
+    display: block; }
+  .faq.active .faq__toggle {
+    transform: rotate(180deg);
+    bottom: 2.5rem; }
