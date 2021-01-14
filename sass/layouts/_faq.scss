@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .heading_primary {
@@ -17,13 +16,12 @@
     border-bottom: 1px solid $Light-grayish-blue;
     margin-bottom: 1rem;
     position: relative;
-    transition: 1s all;
 
     &__title {
         font-size: 1.5rem;
         cursor: pointer;
         margin-bottom: 1rem;
-    
+
         &:hover {
             color: $Soft-red;
         }
@@ -35,7 +33,7 @@
         margin-bottom: 1rem;
         display: none;
         padding-right: 2rem;
-        }
+    }
 
     &__toggle {
         position: absolute;
@@ -45,7 +43,7 @@
         outline: none;
         background-color: #fff;
         cursor: pointer;
-        }
+    }
 
     &.active {
 
